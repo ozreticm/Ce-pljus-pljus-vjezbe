@@ -5,26 +5,27 @@
 
 struct Weight
 {
-	double weight;
+	double weightByYear;
 	int year;
 };
 
 class ZooAnimal
 {
 	std::string species, name;
-	int yearOfBirth, cageNumber, mealNumber, lifeSpan;
+	int yearOfBirth, cageNumber, mealNumber, lifeSpan, insertedWeights = 0;
 	Weight * weight;
 
-	public:
-		ZooAnimal(std::string s, std::string n, int y, int c, int m, int l);
-		ZooAnimal(const ZooAnimal& other);
-		~ZooAnimal();
+public:
+	ZooAnimal(std::string s, std::string n, int y, int c, int m, int l);
+	ZooAnimal(const ZooAnimal& other);
+	~ZooAnimal();
 
-		void set(std::string s, std::string n, int y, int c, int m, int l);
-		void get(std::string *s, std::string *n, int *y, int *c, int *m, int *l) const;
-		void mealNumChange(bool yes);
-		void addWeight(int year, double weight);
-		void print() const;
+	void set(std::string s, std::string n, int y, int c, int m, int l);
+	void get(std::string *s, std::string *n, int *y, int *c, int *m, int *l) const;
+	void mealNumChange(bool yes);
+	void addWeight(int year, double newWeight);
+	void changeOfWeight();
+	void print() const;
 };
 #endif
 
