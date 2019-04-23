@@ -12,7 +12,7 @@ struct Weight
 class ZooAnimal
 {
 	std::string species, name;
-	int yearOfBirth, cageNumber, mealNumber, lifeSpan, insertedWeights = 0;
+	int yearOfBirth, cageNumber, mealNumber, lifeSpan, insertedWeights;
 	Weight * weight;
 
 public:
